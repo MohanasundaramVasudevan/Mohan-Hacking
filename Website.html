@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -15,47 +15,54 @@
             margin: 0;
         }
         .login-container {
-            background-color: #ffffff;
+            background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
             text-align: center;
         }
-        .login-container h2 {
+        h2 {
             margin-bottom: 20px;
         }
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input {
             width: 100%;
             padding: 10px;
-            margin: 10px 0;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-        .login-container button {
-            background-color: #4CAF50;
-            color: white;
+        button {
+            width: 100%;
             padding: 10px;
             border: none;
             border-radius: 4px;
+            background-color: #5cb85c;
+            color: white;
+            font-size: 16px;
             cursor: pointer;
-            width: 100%;
         }
-        .login-container button:hover {
-            background-color: #45a049;
+        button:hover {
+            background-color: #4cae4c;
         }
     </style>
 </head>
 <body>
     <div class="login-container">
-        <h2>Mohan Login Page</h2>
-        <form action="login" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
+        <h2>Login</h2>
+        <form action="/submit-login" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
             <button type="submit">Login</button>
         </form>
-        <p>Designed by Mohanasundaram V</p>
     </div>
 </body>
 </html>
